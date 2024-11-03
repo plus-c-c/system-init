@@ -1,0 +1,3 @@
+系统->系统信息->高级系统设置->环境变量
+PATH
+C:\Program Files (x86)\GnuWin32\bin

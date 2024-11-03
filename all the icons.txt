@@ -1,0 +1,2 @@
+M-x all-the-icons-install-fonts
+windows手动点击下载文件安装

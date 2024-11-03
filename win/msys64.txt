@@ -1,0 +1,1 @@
+pacman -S --noconfirm --needed gcc pkg-config mingw-w64-ucrt-x86_64-gtk3 mingw-w64-x86_64-glib-networking webkitgtk
