@@ -1,6 +1,6 @@
 [submodule "all-the-icons-local-fork"]
 path = linux/fonts
 url = https://github.com/plus-c-c/all-the-icons-local-fork.git
-[submodules "win-apps"]
+[submodule "win-apps"]
 path = win/apps
 url = https://github.com/plus-c-c/win-apps.git
