@@ -1,0 +1,4 @@
+[submodule "all-the-icons"]
+path = linux/fonts
+[submodules "win-apps"]
+path = win/appsxgit 
