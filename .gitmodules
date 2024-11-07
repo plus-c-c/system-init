@@ -1,3 +1,6 @@
 [submodule "win-apps"]
 path = win/apps
 url = https://github.com/plus-c-c/win-apps.git
+[submodule "linux/katex"]
+	path = linux/katex
+	url = https://github.com/KaTeX/katex-fonts.git
