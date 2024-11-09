@@ -1,9 +1,12 @@
-[submodule "win-apps"]
-path = win/apps
-url = https://github.com/plus-c-c/win-apps.git
 [submodule "linux/katex"]
 	path = linux/katex
 	url = https://github.com/KaTeX/katex-fonts.git
 [submodule "win/apps"]
 	path = win/apps
 	url = https://github.com/plus-c-c/win-apps.git
+[submodule "ketcher/Indigo"]
+	path = ketcher/Indigo
+	url = https://github.com/epam/Indigo.git
+[submodule "ketcher/ketcher"]
+	path = ketcher/ketcher
+	url = https://github.com/epam/ketcher.git

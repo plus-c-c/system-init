@@ -1,0 +1,6 @@
+[submodule "Indigo"]
+	path = Indigo
+	url = https://github.com/epam/Indigo.git
+[submodule "ketcher"]
+	path = ketcher
+	url = https://github.com/epam/ketcher.git

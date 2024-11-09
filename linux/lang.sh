@@ -2,7 +2,7 @@ yay -S --noconfirm --needed tree-sitter-markdown
 yay -S --noconfirm --needed vscode-json-languageserver
 yay -S --noconfirm --needed racket
 yay -S --noconfirm --needed bash-language-server
-sudo npm -g install basedpyright
+pip install python-lsp-bridge --break-system-packages
 
 sudo npm install -g tsx typescript typescript-language-server @prisma/language-server
 
