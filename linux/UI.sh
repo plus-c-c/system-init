@@ -8,6 +8,7 @@ sudo chmod +6 /etc/pam.d/login
 sudo echo "auth       optional     pam_gnome_keyring.so
 session    optional     pam_gnome_keyring.so auto_start
 " >> /etc/pam.d/login
-yay -S --noconfirm --needed gcr-4
 systemctl enable --user gcr-ssh-agent.socket
 ssh-add -L
+sudo chmod +666 "/run/user/$(id -u $USER)/keyring/control"
+sudo chmod +666 "/run/user/$(id -u $USER)/keyring/pkcs11"
