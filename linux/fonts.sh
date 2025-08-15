@@ -9,4 +9,5 @@ curl https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/we
 cp -r ./all-the-icons/* ~/.local/share/all-the-icons/
 mkdir ~/.local/share/fonts/KaTeX/
 cp -r ./katex/fonts/* ~/.local/share/fonts/KaTeX/
+yay -S --noconfirm --needed wqy-microhei adobe-source-code-pro-fonts
 fc-cache -fv
