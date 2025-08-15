@@ -4,6 +4,3 @@
 [submodule "win/apps"]
 	path = win/apps
 	url = https://github.com/plus-c-c/win-apps.git
-[submodule "picture-repo"]
-	path = picture-repo
-	url = https://github.com/plus-c-c/picture-repo.git
