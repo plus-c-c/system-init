@@ -7,3 +7,70 @@ git config --global https.proxy "http://127.0.0.1:7890"
 yay --noconfirm --needed -S clash-verge-rev
 yay --noconfirm --needed -S chromium
 pip install pycookiecheat --break-system-packages
+
+# Webdav
+sudo mkdir /cloud
+mkdir /cloud/webdav
+
+yay --noconfirm --needed -S rclone
+
+sudo rclone config create nutstore webdav url="https://dav.jianguoyun.com/dav" user=3559084904@qq.com pass=aifk3cfhse28ah9t --non-interactive
+
+sudo chmod 666 /etc/fuse.conf
+sudo echo "user_allow_other" >> /etc/fuse.conf
+
+sudo touch /etc/systemd/system/rclone-webdav.service
+sudo chmod 666 /etc/systemd/system/rclone-webdav.service
+sudo echo "[Unit]
+Description=Mount Webdav using rclone
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount nutstore: /cloud/webdav --allow-other --allow-non-empty --vfs-cache-mode writes
+ExecStop=/bin/fusermount3 -u /cloud/webdav
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/rclone-webdav.service
+
+sudo systemctl enable rclone-webdav.service
+sudo systemctl start rclone-webdav.service
+sudo chmod 644 /etc/systemd/system/rclone-webdav.service
+
+sudo touch /etc/systemd/system/rclone-webdav-sync.timer
+sudo chmod 666 /etc/systemd/system/rclone-webdav-sync.timer
+
+sudo echo "[Unit]
+Description=Synchronize webdav path timer
+After=network-online.target
+
+[Timer]
+OnUnitActiveSec=1m
+Unit=rclone-webdav-sync.service
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/rclone-webdav-sync.timer
+sudo chmod 644 /etc/systemd/system/rclone-webdav-sync.timer
+
+sudo touch /etc/systemd/system/rclone-webdav-sync.service
+sudo chmod 666 /etc/systemd/system/rclone-webdav-sync.service
+
+sudo echo "[Unit]
+Description=Synchronize webdav path
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/rclone sync nutstore: /cloud/webdav
+User=root
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/rclone-webdav-sync.service
+
+sudo chmod 644 /etc/systemd/system/rclone-webdav-sync.service
+sudo systemctl enable rclone-webdav-sync.timer
+sudo systemctl enable rclone-webdav-sync.service
