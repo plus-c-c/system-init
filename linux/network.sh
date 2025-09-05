@@ -4,7 +4,7 @@ sudo npm -g config set https-proxy http://127.0.0.1:7890
 git config --global http.proxy "http://127.0.0.1:7890"
 git config --global https.proxy "http://127.0.0.1:7890"
 
-yay --noconfirm --needed -S clash-verge-rev
+yay --noconfirm --needed -S clash-verge-rev-autobuild-bin
 yay --noconfirm --needed -S chromium
 pip install pycookiecheat --break-system-packages
 
@@ -74,3 +74,4 @@ WantedBy=multi-user.target
 sudo chmod 644 /etc/systemd/system/rclone-webdav-sync.service
 sudo systemctl enable rclone-webdav-sync.timer
 sudo systemctl enable rclone-webdav-sync.service
+

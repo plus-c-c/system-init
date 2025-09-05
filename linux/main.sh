@@ -5,4 +5,6 @@ xchmod +x * -R
 ./lang.sh
 ./network.sh
 ./UI.sh
-./keyring.sh
+./sound.sh
+./AI.sh
+#./keyring.sh
