@@ -1,4 +1,5 @@
 yay -S --noconfirm --needed ollama-rocm
+yay -S --noconfirm --needed python-ollama
 sudo systemctl enable ollama
 sudo systemctl start ollama
 ollama pull deepseek-r1
