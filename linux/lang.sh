@@ -25,8 +25,5 @@ sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsing
 # texlive
 yay --noconfirm --needed -S texlive texlive-lang texlab
 
-# input method
-yay --noconfirm --needed -S fcitx5-im fcitx5-chinese-addons gnome-shell-extension-kimpanel-git
-gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
 # database
 yay --noconfirm --needed -S postgresql
