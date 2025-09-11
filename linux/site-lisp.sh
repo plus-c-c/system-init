@@ -11,4 +11,4 @@ cd ~/.emacs.d/site-lisp/emacs-application-framework/
 chmod +x ./install-eaf.py
 ./install-eaf.py --force -i emacs-application-framework browser pdf-viewer file-manager git pyqterminal file-sender image-viewer js-video-player
 
-raco pkg install --auto racket-langserver
+sudo raco pkg install --auto racket-langserver

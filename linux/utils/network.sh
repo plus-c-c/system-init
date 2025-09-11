@@ -75,3 +75,4 @@ sudo chmod 644 /etc/systemd/system/rclone-webdav-sync.service
 sudo systemctl enable rclone-webdav-sync.timer
 sudo systemctl enable rclone-webdav-sync.service
 
+yay -S --noconfirm --needed github-cli
