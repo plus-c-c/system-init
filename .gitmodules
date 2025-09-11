@@ -4,3 +4,6 @@
 [submodule "win/apps"]
 	path = win/apps
 	url = https://github.com/plus-c-c/win-apps.git
+[submodule "linux/utils/grub/vimix"]
+	path = linux/utils/grub/vimix
+	url = https://github.com/plus-c-c/grub2-theme-vimix.git
