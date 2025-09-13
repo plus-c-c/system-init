@@ -1,5 +1,6 @@
 source ./var.sh
 ./grub.sh
+./display-manager.sh
 ./UI.sh
 #./UI-hyprland.sh
 ./sound.sh
