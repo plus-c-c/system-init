@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Fira Mono";
+    font-family: "SauceCodePro Nerd Font";
     font-weight: 500;
     font-size: 18px;
 
     border-radius: 10px;
     text-shadow: none;
-    
+
     transition-property: background;
     transition-duration: 0.2s;
 }
