@@ -3,4 +3,4 @@ chmod +x * -R
 ./site-lisp.sh
 ./lang.sh
 ./AI.sh
-./zotero.sh
+./reference.sh
