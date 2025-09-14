@@ -18,6 +18,9 @@ sudo npm install -g tsx typescript typescript-language-server @prisma/language-s
 yay -S --noconfirm --needed r
 sudo cp -f ./lang-conf/Renviron /etc/R/
 sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN")'
+
+sudo raco pkg install --auto racket-langserver
+
 # texlive
 yay --noconfirm --needed -S texlive texlive-lang texlab
 
