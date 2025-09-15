@@ -60,13 +60,15 @@ window#waybar.hidden {
 #cpu,
 #memory,
 #network,
+#battery,
 #pulseaudio,
+#backlight,
 #tray,
 #mode,
 #window {
     margin-top: 6px;
     padding: 0 12px;
-    color: #ffffff;
+    color: #909090;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -80,28 +82,38 @@ window#waybar.hidden {
 }
 
 #clock {
-    background-color: #eefff1;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
 }
 
 #cpu {
-    background-color: #FE968B;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
 }
 
 #memory {
-    background-color: #FFEAAA;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
 }
 
 #pulseaudio {
-    background-color: #b0f5e5;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
 }
 
 #network {
-    background-color: #87ddff;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
+}
+
+#battery {
+    background-color: #282a36;
+    color: #909090;
+}
+
+#backlight {
+    background-color: #282a36;
+    color: #909090;
 }
 
 #tray {
@@ -111,6 +123,6 @@ window#waybar.hidden {
 #window {
     font-family: 'Fira Mono', 'Noto Sans CJK SC', sans-serif;
     font-weight: 400;
-    background-color: #cbecff;
-    color: #000000;
+    background-color: #282a36;
+    color: #909090;
 }
