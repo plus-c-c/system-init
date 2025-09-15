@@ -69,7 +69,7 @@
         "on-click-right": "pavucontrol"
     },
     "backlight": {
-        "min": 15,
+        "min": 0,
         "max": 100,
 	"format": "{icon}{percent:3}%",
 	"format-icons": ["", ""]
