@@ -5,6 +5,7 @@ sudo cp -f ./grub /etc/default
 
 cp -f ../var.sh ./vimix/
 cd ./vimix
+chmod +x ./theme.sh
 ./theme.sh
 
 sudo cp -rf ./Vimix/ /usr/share/grub/themes/
