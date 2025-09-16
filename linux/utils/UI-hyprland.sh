@@ -6,7 +6,7 @@ yay -S --noconfirm --needed hyprland hyprpaper
 cp -r ./UI/hypr/ ~/.config/
 
 ###basic software
-yay -S --noconfirm --needed kitty dolphin tofi
+yay -S --noconfirm --needed kitty thunar tofi
 
 mkdir ~/.config/tofi
 cp ./UI/tofi/config ~/.config/tofi
