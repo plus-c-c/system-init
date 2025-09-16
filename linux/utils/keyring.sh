@@ -1,3 +1,4 @@
+yay -S --needed --noconfirm gnome-keyring
 # dbus-send --session --dest=org.freedesktop.secrets \
 #   --type=method_call  \
 #   /org/freedesktop/secrets \

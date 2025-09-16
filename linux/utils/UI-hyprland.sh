@@ -9,7 +9,7 @@ cp -r ./UI/hypr/ ~/.config/
 yay -S --noconfirm --needed kitty dolphin tofi
 
 mkdir ~/.config/tofi
-mkdir ~/.config/waybar
 cp ./UI/tofi/config ~/.config/tofi
 cp -r ./UI/waybar/ ~/.config/
 cp ./UI/.Xresources ~/.Xresources
+chmod +x ~/.config/hypr/tofi-args.sh
