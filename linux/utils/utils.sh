@@ -8,3 +8,4 @@ source ./var.sh
 ./terminal.sh
 ./network.sh
 ./keyring.sh
+./device.sh

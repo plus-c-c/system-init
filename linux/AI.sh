@@ -1,7 +1,6 @@
 yay -S --noconfirm --needed ollama-rocm
 yay -S --noconfirm --needed python-ollama
-sudo systemctl enable ollama
-sudo systemctl start ollama
+
 ollama pull deepseek-r1
 
 sudo chmod 666 /usr/lib/systemd/system/ollama.service
@@ -32,3 +31,6 @@ ProtectHome=yes
 WantedBy=multi-user.target
 ' > /usr/lib/systemd/system/ollama.service
 sudo chmod 644 /usr/lib/systemd/system/ollama.service
+sudo systemctl daemon-reload
+sudo systemctl enable ollama
+sudo systemctl start ollama
