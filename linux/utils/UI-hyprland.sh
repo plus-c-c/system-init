@@ -1,11 +1,11 @@
-###dpi
+### dpi
 yay -S --noconfirm --needed xorg-xrandr
 
-###window manager
+### window manager
 yay -S --noconfirm --needed hyprland hyprpaper
 cp -r ./UI/hypr/ ~/.config/
 
-###basic software
+### basic software
 yay -S --noconfirm --needed kitty thunar tofi
 
 mkdir ~/.config/tofi
@@ -22,3 +22,5 @@ chmod +x ~/.config/hypr/tofi-args.sh
 
 ### screen shot
 yay -S --noconfirm --needed hyprshot-gui
+### dark mode
+yay -S --noconfirm --needed gnome-themes-extra adwaita-qt5-git adwaita-qt6-git
