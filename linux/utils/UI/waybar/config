@@ -54,9 +54,9 @@
     "pulseaudio": {
         "scroll-step": 5,
         "format": "{icon} {volume:3}%",
-        "format-muted": "",
-        "format-bluetooth": "{icon} {volume:3}%",
-        "format-bluetooth-muted": " {icon}",
+        "format-muted": " {volume:3}%",
+        "format-bluetooth": "{icon}{volume:3}%",
+        "format-bluetooth-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -71,7 +71,7 @@
     "backlight": {
         "min": 0,
         "max": 100,
-	"format": "{icon}{percent:3}%",
+	"format": "{icon} {percent:3}%",
 	"format-icons": ["", ""]
     }
 }

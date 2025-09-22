@@ -16,3 +16,4 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export LC_CTYPE=zh_CN.UTF-8
 export XMODIFIERS="@im=fcitx"
+export PATH=$PATH:~/.local/bin

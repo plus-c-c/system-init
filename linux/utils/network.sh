@@ -8,6 +8,26 @@ yay --noconfirm --needed -S clash-verge-rev-autobuild-bin
 yay --noconfirm --needed -S chromium
 pip install pycookiecheat --break-system-packages
 
+sudo systemctl enable clash-verge-service
+sudo systemctl start clash-verge-service
+
+sudo chmod 666 /etc/systemd/system/clash-verge-service.service
+sudo echo "
+[Unit]
+Description=Clash Verge Service helps to launch Clash Core.
+After=network-online.target nftables.service iptables.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/clash-verge-service
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/clash-verge-service.service
+sudo chmod 644 /etc/systemd/system/clash-verge-service.service
+
 # Webdav
 sudo mkdir /cloud
 mkdir /cloud/webdav
