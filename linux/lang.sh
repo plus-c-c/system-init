@@ -1,25 +1,6 @@
 # programming environment
 yay -S --needed --noconfirm github-cli emacs
 
-# lenguage IDE and LSP server
-yay -S --noconfirm --needed tree-sitter-markdown
-
-yay -S --noconfirm --needed vscode-json-languageserver
-
-yay -S --noconfirm --needed racket
-raco pkg install racket-langserver
-
-yay -S --noconfirm --needed bash-language-server
-
-yay -S --noconfirm --needed python uv python-lsp-server python-lsp-ruff python-virtualenv python-virtualenvwrapper
-
-sudo npm install -g tsx typescript typescript-language-server @prisma/language-server
-
-yay -S --noconfirm --needed r
-sudo cp -f ./lang-conf/Renviron /etc/R/
-sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN")'
-
-sudo raco pkg install --auto racket-langserver
 
 # texlive
 yay --noconfirm --needed -S texlive texlive-lang texlab
@@ -41,3 +22,28 @@ mkdir ~/.local/share/fonts/KaTeX/
 cp -r ./katex/fonts/* ~/.local/share/fonts/KaTeX/
 yay -S --noconfirm --needed wqy-microhei ttf-sourcecodepro-nerd ttf-cascadia-code-nerd otf-font-awesome otf-fira-mono xorg-fonts-misc
 fc-cache -fv
+
+### language IDE and LSP server
+# markdown
+yay -S --noconfirm --needed tree-sitter-markdown
+
+# json
+yay -S --noconfirm --needed vscode-json-languageserver
+
+# js/ts
+sudo npm install -g tsx typescript typescript-language-server @prisma/language-server
+
+# racket
+yay -S --noconfirm --needed racket
+sudo raco pkg install --auto racket-langserver
+
+# bash
+yay -S --noconfirm --needed bash-language-server
+
+# python
+yay -S --noconfirm --needed python uv dasel python-debugpy pyright ruff ruff-lsp
+
+# r
+yay -S --noconfirm --needed r
+sudo cp -f ./lang-conf/Renviron /etc/R/
+sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN")'

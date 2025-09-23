@@ -4,30 +4,11 @@ sudo npm -g config set https-proxy http://127.0.0.1:7890
 git config --global http.proxy "http://127.0.0.1:7890"
 git config --global https.proxy "http://127.0.0.1:7890"
 
-yay --noconfirm --needed -S clash-verge-rev-autobuild-bin
 yay --noconfirm --needed -S chromium
 pip install pycookiecheat --break-system-packages
 
-sudo touch /etc/systemd/system/clash-verge-service.service
-sudo chmod 666 /etc/systemd/system/clash-verge-service.service
-sudo echo "
-[Unit]
-Description=Clash Verge Service helps to launch Clash Core.
-After=network-online.target nftables.service iptables.service
+yay --noconfirm --needed -S sparkle
 
-[Service]
-Type=simple
-ExecStart=/usr/bin/sh -c /usr/bin/uninstall-service & /usr/bin/sh -c /usr/bin/install-service & /usr/bin/clash-verge-service
-Restart=always
-RestartSec=5
-User=root
-
-[Install]
-WantedBy=multi-user.target" > /etc/systemd/system/clash-verge-service.service
-sudo chmod 644 /etc/systemd/system/clash-verge-service.service
-
-sudo systemctl enable clash-verge-service
-sudo systemctl start clash-verge-service
 # Webdav
 sudo mkdir /cloud
 mkdir /cloud/webdav
