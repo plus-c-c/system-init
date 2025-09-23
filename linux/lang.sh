@@ -11,7 +11,7 @@ raco pkg install racket-langserver
 
 yay -S --noconfirm --needed bash-language-server
 
-yay -S --noconfirm --needed python uv python-lsp-server
+yay -S --noconfirm --needed python uv python-lsp-server python-lsp-ruff python-virtualenv python-virtualenvwrapper
 
 sudo npm install -g tsx typescript typescript-language-server @prisma/language-server
 
