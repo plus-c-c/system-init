@@ -47,3 +47,6 @@ yay -S --noconfirm --needed python uv dasel python-debugpy pyright ruff ruff-lsp
 yay -S --noconfirm --needed r
 sudo cp -f ./lang-conf/Renviron /etc/R/
 sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN")'
+
+# plantuml
+yay -S --noconfirm --needed plantuml
