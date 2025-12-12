@@ -8,6 +8,6 @@ git clone https://github.com/manateelazycat/auto-save.git ~/.emacs.d/site-lisp/a
 
 cd ~/.emacs.d/site-lisp/emacs-application-framework/
 chmod +x ./install-eaf.py
-./install-eaf.py --force -i emacs-application-framework browser pdf-viewer file-manager git pyqterminal file-sender image-viewer js-video-player
+./install-eaf.py --force -i emacs-application-framework browser pdf-viewer file-manager git pyqterminal file-sender image-viewer video-player video-editor org-previewer markdown-previewer
 
 pip install --break-system-packages pycookiecheat aria2p epc

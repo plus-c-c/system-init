@@ -46,7 +46,8 @@ yay -S --noconfirm --needed python uv dasel python-debugpy pyright ruff ruff-lsp
 # r
 yay -S --noconfirm --needed r
 sudo cp -f ./lang-conf/Renviron /etc/R/
-sudo R -e 'install.packages("languageserver",repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN")'
+sudo R -f "./lang-conf/install.R"
 
-# plantuml
-yay -S --noconfirm --needed plantuml
+yay -S --noconfirm --needed r-vegan
+# mindmap
+yay -S --noconfirm --needed plantuml mermaid-cli
