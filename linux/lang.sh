@@ -20,7 +20,12 @@ curl https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/we
 cp -r ./all-the-icons/* ~/.local/share/all-the-icons/
 mkdir ~/.local/share/fonts/KaTeX/
 cp -r ./katex/fonts/* ~/.local/share/fonts/KaTeX/
-yay -S --noconfirm --needed wqy-microhei ttf-sourcecodepro-nerd ttf-cascadia-code-nerd otf-font-awesome otf-fira-mono xorg-fonts-misc
+yay -S --noconfirm --needed wqy-microhei ttf-sourcecodepro-nerd ttf-cascadia-code-nerd otf-font-awesome otf-fira-mono xorg-fonts-misc ttf-ms-fonts
+
+#mkdir ~/.local/share/fonts
+#mkdir ~/.local/share/fonts/WindowsFonts
+#cp /mnt/win/Windows/Fonts/* ~/.local/share/fonts/WindowsFonts/
+#chmod 644 ~/.local/share/fonts/WindowsFonts/*
 fc-cache -fv
 
 ### language IDE and LSP server
