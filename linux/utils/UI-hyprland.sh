@@ -2,7 +2,7 @@
 yay -S --noconfirm --needed xorg-xrandr
 
 ### window manager
-yay -S --noconfirm --needed hyprland hyprpaper
+yay -S --noconfirm --needed hyprland hyprpaper brightnessctl
 cp -r ./UI/hypr/ ~/.config/
 
 ### basic software
