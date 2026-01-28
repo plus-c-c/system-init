@@ -24,3 +24,10 @@ chmod +x ~/.config/hypr/tofi-args.sh
 yay -S --noconfirm --needed hyprshot-gui
 ### dark mode
 yay -S --noconfirm --needed gnome-themes-extra adwaita-qt5-git adwaita-qt6-git
+
+### screen share
+yay -S --noconfirm --needed xdg-desktop-portal-hyprland pipewire wireplumber
+yay -S --noconfirm --needed luajit linux-headers v4l2loopback-dkms
+yay -S --noconfirm --needed obs-studio
+
+sudo usermod -aG video $USER
