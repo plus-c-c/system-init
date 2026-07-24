@@ -6,10 +6,12 @@ MIN=0
 MAX=100
 
 # Calculate gamma based on brightness level (lower brightness = lower gamma)
+# Uses sqrt curve for slower gamma decrease
 calc_gamma() {
     local brightness=$1
-    # gamma range: 0.4 (dim) to 1.0 (bright)
-    echo "scale=2; 0.4 + ($brightness / 100) * 0.6" | bc
+    # gamma range: 0.5 (dim) to 1.0 (bright)
+    # sqrt curve: gamma decreases slower at low brightness
+    echo "scale=2; 0.5 + 0.5 * sqrt($brightness / 100)" | bc
 }
 
 current=$(brightnessctl -m | awk -F, '{print $4}' | tr -d '%')
