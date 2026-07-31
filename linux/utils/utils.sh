@@ -9,3 +9,4 @@ source ./var.sh
 ./network.sh
 ./keyring.sh
 ./device.sh
+./power.sh

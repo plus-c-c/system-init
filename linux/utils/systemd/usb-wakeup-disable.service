@@ -1,0 +1,12 @@
+[Unit]
+Description=Disable USB XHCI wakeup for reliable s2idle
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c "grep -q '^XHC1.*\*enabled' /proc/acpi/wakeup && echo XHC1 > /proc/acpi/wakeup || true"
+ExecStart=/bin/sh -c "grep -q '^XHC4.*\*enabled' /proc/acpi/wakeup && echo XHC4 > /proc/acpi/wakeup || true"
+
+[Install]
+WantedBy=multi-user.target
