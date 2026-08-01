@@ -24,7 +24,7 @@ window#waybar.hidden {
 	background: rgba(16, 20, 24, 0.5);
 	transition: none;
 
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #workspaces button {
@@ -63,6 +63,7 @@ window#waybar.hidden {
 #battery,
 #pulseaudio,
 #backlight,
+#custom-brightness,
 #tray,
 #mode,
 #window {
@@ -111,7 +112,8 @@ window#waybar.hidden {
     color: #909090;
 }
 
-#backlight {
+#backlight,
+#custom-brightness {
     background-color: #282a36;
     color: #909090;
 }
