@@ -67,6 +67,9 @@ yay -S --noconfirm --needed bash-language-server
 # python
 yay -S --noconfirm --needed python uv dasel python-debugpy pyright ruff ruff-lsp
 
+# lua
+yay -S --noconfirm --needed lua-language-server
+
 # r
 yay -S --noconfirm --needed r
 sudo cp -f ./lang-conf/Renviron /etc/R/
