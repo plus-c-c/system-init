@@ -26,7 +26,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("udiskie")
     hl.exec_cmd("xrdb ~/.Xresources")
-    hl.exec_cmd("sudo pkill -f /opt/sparkle; sleep 2; /opt/sparkle/sparkle")
+    hl.exec_cmd("sudo pkill -x sparkle; sudo pkill -x mihomo; sleep 2; /opt/sparkle/sparkle")
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
     hl.exec_cmd("fcitx5 --replace -d")
@@ -38,7 +38,7 @@ hl.on("hyprland.start", function()
 end)
 
 hl.on("hyprland.shutdown", function()
-    hl.exec_cmd("sudo pkill -f /opt/sparkle")
+    hl.exec_cmd("sudo pkill -x sparkle; sudo pkill -x mihomo")
 end)
 
 ------------------------
