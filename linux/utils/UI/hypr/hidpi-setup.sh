@@ -23,8 +23,8 @@ echo "Cursor size: ${CURSOR_SIZE}"
 
 # 1. Hyprland cursor size
 echo "[1/5] Updating Hyprland cursor size..."
-sed -i "s/XCURSOR_SIZE,[0-9]*/XCURSOR_SIZE,${CURSOR_SIZE}/" ~/.config/hypr/hyprland.conf
-sed -i "s/HYPRCURSOR_SIZE,[0-9]*/HYPRCURSOR_SIZE,${CURSOR_SIZE}/" ~/.config/hypr/hyprland.conf
+sed -i 's/hl.env("XCURSOR_SIZE", "[0-9]*")/hl.env("XCURSOR_SIZE", "'${CURSOR_SIZE}'")/' ~/.config/hypr/hyprland.lua
+sed -i 's/hl.env("HYPRCURSOR_SIZE", "[0-9]*")/hl.env("HYPRCURSOR_SIZE", "'${CURSOR_SIZE}'")/' ~/.config/hypr/hyprland.lua
 
 # 2. Xft.dpi
 echo "[2/5] Updating Xft.dpi..."
@@ -45,10 +45,10 @@ done
 
 # 4. QT scale factor
 echo "[4/5] Updating QT settings..."
-if grep -q "QT_SCALE_FACTOR" ~/.config/hypr/hyprland.conf; then
-    sed -i "s/QT_SCALE_FACTOR,[0-9]*/QT_SCALE_FACTOR,${SCALE_FACTOR}/" ~/.config/hypr/hyprland.conf
+if grep -q 'hl.env("QT_SCALE_FACTOR"' ~/.config/hypr/hyprland.lua; then
+    sed -i 's/hl.env("QT_SCALE_FACTOR", "[0-9]*")/hl.env("QT_SCALE_FACTOR", "'${SCALE_FACTOR}'")/' ~/.config/hypr/hyprland.lua
 else
-    sed -i "/env = XCURSOR_SIZE/a env = QT_SCALE_FACTOR,${SCALE_FACTOR}" ~/.config/hypr/hyprland.conf
+    sed -i '/hl.env("XCURSOR_SIZE"/a hl.env("QT_SCALE_FACTOR", "'${SCALE_FACTOR}'")' ~/.config/hypr/hyprland.lua
 fi
 
 # 5. Waybar font size (proportional to scale)
