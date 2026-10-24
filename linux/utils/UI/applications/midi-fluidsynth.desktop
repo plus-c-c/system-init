@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=FluidSynth MIDI Player
+GenericName=MIDI Player
+Comment=Play MIDI files with FluidSynth and the FluidR3 GM SoundFont
+Exec=/usr/bin/fluidsynth -i -a pulseaudio -g 0.5 /usr/share/soundfonts/FluidR3_GM.sf2 %f
+Icon=audio-x-generic
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+MimeType=audio/midi;audio/x-midi;
+Keywords=midi;mid;music;fluidsynth;
+StartupNotify=false

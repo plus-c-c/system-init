@@ -6,7 +6,10 @@ yay -S --noconfirm --needed hyprland hyprpaper brightnessctl
 cp -r ./UI/hypr/ ~/.config/
 
 ### basic software
-yay -S --noconfirm --needed kitty thunar tofi
+yay -S --noconfirm --needed kitty thunar tofi totem fluidsynth soundfont-fluid xdg-utils desktop-file-utils
+
+mkdir -p ~/.config/kitty
+[ -f ~/.config/kitty/kitty.conf ] || cp ./UI/kitty.conf ~/.config/kitty/kitty.conf
 
 mkdir ~/.config/tofi
 cp ./UI/tofi/config ~/.config/tofi

@@ -9,3 +9,4 @@ chmod +x * -R
 ./opencode.sh
 ./reference.sh
 ./android.sh
+./desktop-defaults.sh

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Videos (WAV)
+GenericName=Audio/Video Player
+Comment=Play WAV files with Totem
+Exec=/usr/bin/totem %f
+Icon=org.gnome.Totem
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+MimeType=audio/wav;audio/x-wav;audio/wave;
+Keywords=wav;audio;music;totem;
+StartupNotify=true
