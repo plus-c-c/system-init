@@ -26,7 +26,8 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("udiskie")
     hl.exec_cmd("xrdb ~/.Xresources")
-    hl.exec_cmd("sudo pkill -x sparkle; sudo pkill -x mihomo; sleep 2; /opt/sparkle/sparkle")
+    -- Sparkle (含 mihomo 核心) 由 ~/.config/autostart/sparkle.desktop 启动，
+    -- 此处不要再拉起，避免二次启动触发 second-instance 强制弹窗。
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
     hl.exec_cmd("fcitx5 --replace -d")
